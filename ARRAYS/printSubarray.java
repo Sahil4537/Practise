@@ -6,6 +6,11 @@ public class printSubarray {
             for(int j=i; j<numbers.length; j++) {
                 for(int k=i; k<=j; k++) {
                     System.out.print(numbers[k] + " ");
+
+                    //sum of sub-arrays
+                    // int sum = numbers[i] + numbers[j];
+                    // System.out.println("Sum of subarray is: " + sum);
+                    
                 }
                 System.out.println();
             }
