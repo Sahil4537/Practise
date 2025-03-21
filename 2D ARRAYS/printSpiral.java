@@ -19,7 +19,7 @@ public class printSpiral {
             }
             //bottom
             for(int j=endCol-1; j>=startCol; j--) {
-                if(startRow == endRow) {
+                if(startRow == endRow) {        //so that double print na ho.
                     break;
                 }
                 System.out.print(matrix[endRow][j] + " ");
