@@ -32,10 +32,20 @@ public class recursionBasics {
         return fn;
     }
 
+    //Sum of n natural no.
+    public static int naturalSum(int n){
+        if(n == 1) {
+            return 1;
+        }
+        int snm1 = naturalSum(n-1);
+        int sumOfn = n + snm1;
+        return sumOfn;
+    }
     public static void main(String args[]) {
         int n=10;
       //  printDec(10);
       //  printInc(10);
-      System.out.println(printFact(5));
+     // System.out.println(printFact(5));
+     System.out.println(naturalSum(10));
     }
 }
