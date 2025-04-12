@@ -41,11 +41,26 @@ public class recursionBasics {
         int sumOfn = n + snm1;
         return sumOfn;
     }
+
+    //Calculate Fibonacci series
+    public static int calcFib(int n) {
+        if(n == 0) {
+            return 0;
+        } if (n == 1) {
+            return 1;
+        }
+      
+      int fibNm1 = calcFib(n-1);
+      int fibNm2 = calcFib(n-2);
+      int fibN = fibNm1 + fibNm2;
+      return fibN;
+    }
     public static void main(String args[]) {
-        int n=10;
+        int n=6;
       //  printDec(10);
       //  printInc(10);
      // System.out.println(printFact(5));
-     System.out.println(naturalSum(10));
+    // System.out.println(naturalSum(10));
+    System.out.println(calcFib(n));
     }
 }
