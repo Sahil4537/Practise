@@ -56,7 +56,7 @@ public class recursionBasics {
       return fibN;
     }
     public static void main(String args[]) {
-        int n=6;
+        int n=36;
       //  printDec(10);
       //  printInc(10);
      // System.out.println(printFact(5));
