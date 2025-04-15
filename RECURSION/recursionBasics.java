@@ -34,7 +34,7 @@ public class recursionBasics {
 
     //Sum of n natural no.
     public static int naturalSum(int n){
-        if(n == 1) {
+        if(n == 1){
             return 1;
         }
         int snm1 = naturalSum(n-1);
