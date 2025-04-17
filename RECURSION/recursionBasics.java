@@ -1,4 +1,4 @@
-
+import java.util.*;
 
 public class recursionBasics {
 
@@ -55,12 +55,27 @@ public class recursionBasics {
       int fibN = fibNm1 + fibNm2;
       return fibN;
     }
+
+    //Sorted an array
+    public static boolean sortArray(int[] arr, int i) {
+        if(i == arr.length-1) {
+            return true;
+        }
+        if(arr[i] > arr[i+1]) {
+            return false;
+        }
+        return sortArray(arr, i+1);
+    }
+
     public static void main(String args[]) {
-        int n=36;
+        //int n=36;
       //  printDec(10);
       //  printInc(10);
      // System.out.println(printFact(5));
     // System.out.println(naturalSum(10));
-    System.out.println(calcFib(n));
+    //System.out.println(calcFib(n));
+
+    int arr[] = {1,2,3,4};
+    System.out.println(sortArray(arr, 0));
     }
 }
