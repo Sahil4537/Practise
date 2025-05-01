@@ -67,6 +67,16 @@ public class recursionBasics {
         return sortArray(arr, i+1);
     }
 
+    //First Occurence
+    public static int firstccurence(int arr[], int key, int i) {
+        if(i == arr.length) {
+            return -1;
+        }
+        if(arr[i] == key) {
+            return i;
+        }
+        return firstccurence(arr, key, i+1);
+    }
     public static void main(String args[]) {
         //int n=36;
       //  printDec(10);
@@ -75,7 +85,10 @@ public class recursionBasics {
     // System.out.println(naturalSum(10));
     //System.out.println(calcFib(n));
 
-    int arr[] = {1,2,3,4};
-    System.out.println(sortArray(arr, 0));
+    // int arr[] = {1,2,3,4};
+    // System.out.println(sortArray(arr, 0));
+
+    int arr[] = {1,2,3,4,5,6,4};
+    System.out.println(firstccurence(arr, 5, 0));
     }
 }
