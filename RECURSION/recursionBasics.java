@@ -77,6 +77,18 @@ public class recursionBasics {
         }
         return firstccurence(arr, key, i+1);
     }
+
+    //Last occurence
+    public static int lastOcurrence(int arr[], int key, int i) {
+        if(i == arr.length){
+            return -1;
+        }
+        int isFound = lastOcurrence(arr, key, i+1);
+        if(isFound == -1 && arr[i] == key){
+            return i;
+        }
+        return isFound;
+    }
     public static void main(String args[]) {
         //int n=36;
       //  printDec(10);
@@ -89,6 +101,6 @@ public class recursionBasics {
     // System.out.println(sortArray(arr, 0));
 
     int arr[] = {1,2,3,4,5,6,4};
-    System.out.println(firstccurence(arr, 5, 0));
+    System.out.println(lastOcurrence(arr, 4, 0));
     }
 }
