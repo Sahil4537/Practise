@@ -89,6 +89,20 @@ public class recursionBasics {
         }
         return isFound;
     }
+
+    public static int power(int x, int n) {
+        if(n == 0){
+            return 1;
+        }
+        // int xnm1 = power(x, n-1);
+        // int xn = x * xnm1;
+        // return xn;
+
+        //optimized way.
+        return x * power(x, n-1);
+
+    }
+
     public static void main(String args[]) {
         //int n=36;
       //  printDec(10);
@@ -100,7 +114,9 @@ public class recursionBasics {
     // int arr[] = {1,2,3,4};
     // System.out.println(sortArray(arr, 0));
 
-    int arr[] = {1,2,3,4,5,6,4};
-    System.out.println(lastOcurrence(arr, 4, 0));
+    // int arr[] = {1,2,3,4,5,6,4};
+    // System.out.println(lastOcurrence(arr, 4, 0));
+
+    System.out.println(power(2, 10));
     }
 }
