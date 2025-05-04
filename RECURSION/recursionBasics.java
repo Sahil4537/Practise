@@ -103,6 +103,25 @@ public class recursionBasics {
 
     }
 
+    //Tiling Problem
+    public static int tilingProblem(int n) {
+        //base case
+        if(n==0 || n ==1){
+            return 1;
+        }
+        //main kaam
+        //verticle calculation
+        int fnm1 = tilingProblem(n-1);
+
+        //horizontal calculation
+        int fnm2 = tilingProblem(n-2);
+
+        //inner call
+        int totalWays = fnm1 + fnm2;
+
+        return totalWays;
+    }
+
     public static void main(String args[]) {
         //int n=36;
       //  printDec(10);
@@ -117,6 +136,7 @@ public class recursionBasics {
     // int arr[] = {1,2,3,4,5,6,4};
     // System.out.println(lastOcurrence(arr, 4, 0));
 
-    System.out.println(power(2, 10));
+   // System.out.println(power(2, 10));
+    System.out.println(tilingProblem(4));
     }
 }
