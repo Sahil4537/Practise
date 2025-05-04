@@ -137,6 +137,21 @@ public class recursionBasics {
         }
     }
 
+    //Friends Pairing Problem
+    public static int friendPairing(int n) {
+        //base case
+        if(n==1 || n==2) {
+            return n;
+        }
+        //Main kaam
+        int fnm1 = friendPairing(n-1);
+        int fnm2 = (n-1) * friendPairing(n-2);
+
+        //function call
+        int totalWays = fnm1 + fnm2;
+        return totalWays;
+    }
+
     public static void main(String args[]) {
         //int n=36;
       //  printDec(10);
@@ -154,9 +169,11 @@ public class recursionBasics {
    // System.out.println(power(2, 10));
    // System.out.println(tilingProblem(4));
 
-   //remove duplicates
-   String str = "appnnacollege";
-   StringBuilder newString = new StringBuilder();
-   removeDuplicates(str, 0, newString, new boolean[26]);
+    //remove duplicates
+    //    String str = "appnnacollege";
+    //    StringBuilder newString = new StringBuilder();
+    //    removeDuplicates(str, 0, newString, new boolean[26]);
+
+    System.out.println(friendPairing(3));
     }
 }
