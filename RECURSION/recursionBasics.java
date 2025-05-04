@@ -122,6 +122,21 @@ public class recursionBasics {
         return totalWays;
     }
 
+    //Remove Duplicates from Strings
+    public static void removeDuplicates(String str, int idx, StringBuilder newString, boolean map[]) {
+        if(idx == str.length()) {
+            System.out.println(newString);
+            return;
+        }
+        char currChar = str.charAt(idx);
+        if(map[currChar - 'a'] == true) {
+            removeDuplicates(str, idx+1, newString, map);
+        } else {
+            map[currChar - 'a'] = true;
+            removeDuplicates(str, idx+1, newString.append(currChar), map);
+        }
+    }
+
     public static void main(String args[]) {
         //int n=36;
       //  printDec(10);
@@ -137,6 +152,11 @@ public class recursionBasics {
     // System.out.println(lastOcurrence(arr, 4, 0));
 
    // System.out.println(power(2, 10));
-    System.out.println(tilingProblem(4));
+   // System.out.println(tilingProblem(4));
+
+   //remove duplicates
+   String str = "appnnacollege";
+   StringBuilder newString = new StringBuilder();
+   removeDuplicates(str, 0, newString, new boolean[26]);
     }
 }
