@@ -144,8 +144,11 @@ public class recursionBasics {
             return n;
         }
         //Main kaam
+        //single
         int fnm1 = friendPairing(n-1);
-        int fnm2 = (n-1) * friendPairing(n-2);
+
+        //pair
+        int fnm2 = (n-1) * friendPairing(n-2);  //(n-1) ->choice after pair form
 
         //function call
         int totalWays = fnm1 + fnm2;
